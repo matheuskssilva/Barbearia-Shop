@@ -1,0 +1,66 @@
+@use '../config/variaveis';
+.sobre_container {
+    display: flex;
+    align-items: center;
+    padding-left: 147px;
+    height: 800px;
+    gap: 205px;
+    background-color: variaveis.$backgroundBlue;
+    width: 100%;
+    z-index: 1;
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        padding-left: 10px;
+        gap: 50px;
+    }
+    & img {
+        position: relative;
+        top: -60px;
+        @media screen and (max-width: 767px) {
+            width: 360px;
+            height: 490px;
+            right: 80px;
+            top: -20px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            width: 400px;
+        }
+    }
+    & .text_sobre {
+        color: variaveis.$colorWhite;
+        @media screen and (max-width: 767px) {
+            max-width: 500px;
+            width: 100%;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-left: -100px;
+            margin-bottom: 76px;
+            margin-top: -200px;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 66px;
+        }
+        p {
+            font-size: 0.9rem;
+            font-weight: 200;
+            line-height: 27px;
+            margin-top: 21px;
+            @media screen and (max-width: 767px) {
+                font-size: 12px;
+                line-height: 20px;
+                width: 300px;
+            }
+            @media screen and (min-width: 768px) and (max-width: 1023px) {
+                max-width: 400px;
+                width: 100%;
+                line-height: 25px;
+            }
+        }
+    }
+}

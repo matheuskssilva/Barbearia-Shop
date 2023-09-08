@@ -1,0 +1,45 @@
+@use '../config/variaveis';
+header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    .nav {
+        display: flex;
+        align-items: center;
+        gap: 300px;
+        text-align: center;
+        justify-content: center;
+        @media screen and (max-width: 767px) {
+            gap: 0;
+            flex-direction: column;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            gap: 100px;
+        }
+    }
+    .links_social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        @media screen and (max-width: 767px) {
+            margin-bottom: 55px;
+            margin-top: 46px;
+        }
+    }
+    .button_nav button {
+        background-color: transparent;
+        border: 1px solid variaveis.$bordaButton;
+        border-radius: 4px;
+        width: 167px;
+        height: 38px;
+        cursor: pointer;
+        color: variaveis.$colorWhite;
+        font-size: 1em;
+        font-weight: 600;
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+}

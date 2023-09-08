@@ -1,0 +1,90 @@
+@use '../config/variaveis';
+.servicos_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 58px;
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        & h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            line-height: 66px;
+            text-align: center;
+        }
+        & p {
+            font-size: 0.8rem;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: right;
+            margin-top: 24px;
+        }
+    }
+    .cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        margin-top: 44px;
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            flex-direction: column;
+        }
+    }
+    .card {
+        border-radius: 16px 16px 0px 0px solid;
+        border: 20px 0px solid #000;
+        margin-top: 20px;
+        cursor: pointer;
+        img {
+            border-radius: 13px 13px 0px 0px;
+        }
+        & h2 {
+            font-weight: 700;
+            font-size: 1.2rem;
+            line-height: 27px;
+        }
+        & h2,
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 80px;
+        }
+        span {
+            background-color: variaveis.$colorRed;
+            color: variaveis.$colorWhite;
+            font-size: 0.8rem;
+            width: 101px;
+            height: 34px;
+            border-radius: 8px;
+        }
+        .text_card {
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            border: 5px solid #ffffff;
+            border-radius: 0px 0px 30px 30px;
+            box-shadow: 1px 2px 2px rgb(130, 130, 130);
+        }
+    }
+}
+
+@media screen and (max-width: variaveis.$mobile) {
+    .cards {
+        flex-direction: column;
+        width: 100px;
+    }
+    .title p {
+        width: 300px;
+        text-align: center;
+        margin-left: -30px;
+        align-items: center;
+        justify-content: center;
+    }
+}

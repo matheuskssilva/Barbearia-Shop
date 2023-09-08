@@ -1,0 +1,48 @@
+@use '../config/variaveis';
+.hero_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: variaveis.$colorWhite;
+    margin-top: 104px;
+    & h1 {
+        font-size: 48px;
+        @media screen and (max-width: 767px) {
+            font-size: 28px;
+            line-height: 40px;
+            text-align: center;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            font-size: 38px;
+            line-height: 51px;
+            text-align: center;
+        }
+    }
+    & p {
+        margin-top: 7px;
+        font-weight: 300;
+        font-size: 1.12rem;
+        @media screen and (max-width: 767px) {
+            font-size: 14px;
+            margin-top: 34px;
+        }
+    }
+    & button {
+        margin-top: 58px;
+        width: 252px;
+        height: 66px;
+        background-color: variaveis.$colorRed;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: variaveis.$colorWhite;
+        border: none;
+        cursor: pointer;
+        border-radius: 2px;
+        @media screen and (max-width: 767px) {
+            width: 193px;
+            height: 48px;
+            font-size: 14px;
+        }
+    }
+}
